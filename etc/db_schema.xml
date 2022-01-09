@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="vignates_minitracker_minitracker" resource="default" engine="innodb" comment="vignates_minitracker_minitracker Table">
+		<column xsi:type="smallint" name="minitracker_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="minitracker_id"/>
+		</constraint>
+		<column name="sku" nullable="false" xsi:type="varchar" comment="sku" length="255"/>
+		<index referenceId="VIGNATES_MINITRACKER_MINITRACKER_SKU" indexType="btree">
+			<column name="sku"/>
+		</index>
+		<column name="tracking_code" nullable="true" xsi:type="varchar" comment="tracking_code" length="255"/>
+		<column name="tracking_message" nullable="true" xsi:type="text" comment="tracking_message"/>
+		<column name="created_at" nullable="true" xsi:type="timestamp" comment="created_at" default="CURRENT_TIMESTAMP"/>
+	</table>
+</schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/vignates-minitracker/tracking" method="GET">
+		<service class="Vignates\MiniTracker\Api\TrackingManagementInterface" method="getTracking"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/vignates-minitracker/minitracker" method="POST">
+		<service class="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Vignates_MiniTracker::MiniTracker_save"/>
+		</resources>
+	</route>
+	<route url="/V1/vignates-minitracker/minitracker/search" method="GET">
+		<service class="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Vignates_MiniTracker::MiniTracker_view"/>
+		</resources>
+	</route>
+	<route url="/V1/vignates-minitracker/minitracker/:minitrackerId" method="GET">
+		<service class="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Vignates_MiniTracker::MiniTracker_view"/>
+		</resources>
+	</route>
+	<route url="/V1/vignates-minitracker/minitracker/:minitrackerId" method="PUT">
+		<service class="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Vignates_MiniTracker::MiniTracker_update"/>
+		</resources>
+	</route>
+	<route url="/V1/vignates-minitracker/minitracker/:minitrackerId" method="DELETE">
+		<service class="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Vignates_MiniTracker::MiniTracker_delete"/>
+		</resources>
+	</route>
+</routes>

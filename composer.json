@@ -1,0 +1,22 @@
+{
+    "name": "vignates/module-minitracker",
+    "description": "The mini Tracker",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Vignesh",
+            "email": "vignesh.muthuswamy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vignates\\MiniTracker\\": ""
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Vignates\MiniTracker\Api\TrackingManagementInterface" type="Vignates\MiniTracker\Model\TrackingManagement"/>
+	<preference for="Vignates\MiniTracker\Api\MiniTrackerRepositoryInterface" type="Vignates\MiniTracker\Model\MiniTrackerRepository"/>
+	<preference for="Vignates\MiniTracker\Api\Data\MiniTrackerInterface" type="Vignates\MiniTracker\Model\MiniTracker"/>
+	<preference for="Vignates\MiniTracker\Api\Data\MiniTrackerSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>

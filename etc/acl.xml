@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Vignates_MiniTracker::MiniTracker" title="MiniTracker" sortOrder="10">
+					<resource id="Vignates_MiniTracker::MiniTracker_save" title="Save MiniTracker" sortOrder="10"/>
+					<resource id="Vignates_MiniTracker::MiniTracker_delete" title="Delete MiniTracker" sortOrder="20"/>
+					<resource id="Vignates_MiniTracker::MiniTracker_update" title="Update MiniTracker" sortOrder="30"/>
+					<resource id="Vignates_MiniTracker::MiniTracker_view" title="View MiniTracker" sortOrder="40"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>
